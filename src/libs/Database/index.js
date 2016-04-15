@@ -11,6 +11,26 @@ const knex = require('knex')({
 });
 const database = require('bookshelf')(knex);
 
+exports.Communication = database.Model.extend({
+  tableName: 'communication'
+});
+
+exports.CommunicationType = database.Model.extend({
+  tableName: 'communication_type'
+});
+
+exports.Customer = database.Model.extend({
+  tableName: 'customer'
+});
+
+exports.Item = database.Model.extend({
+  tableName: 'item'
+});
+
+exports.Sale = database.Model.extend({
+  tableName: 'sale'
+});
+
 exports.User = database.Model.extend({
-  tableName: 'User'
+  tableName: 'user'
 });
