@@ -54,3 +54,16 @@ exports.login = (email, password, raw = true) => {
     }
   });
 };
+
+exports.create = async (firstName, lastName, email, password) => {
+  const hashedPassword = await hash(password);
+
+  return User
+    .forge({
+      firstName,
+      lastName,
+      email,
+      password: hashedPassword
+    })
+    .save();
+};
