@@ -1,7 +1,7 @@
 const Service = require(`../Database`).Service;
 
 exports.get = () => {
-  return Service.fetchAll();
+  return Service.fetchAll().then(result => { return result.toJSON() });
 };
 
 exports.updateName = (id, name) => {

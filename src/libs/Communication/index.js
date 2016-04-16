@@ -1,25 +1,28 @@
 const Communication = require(`../Database`).Communication;
 
 exports.get = () => {
-  return Communication.fetchAll();
+  return Communication.fetchAll().then(result => { return result.toJSON() });
 };
 
 exports.getAllForCommunicationType = communicationType => {
   return Communication
     .where({ communicationType })
-    .fetch();
+    .fetchAll()
+    .then(result => { return result.toJSON() });
 };
 
 exports.getAllForCustomer = customer => {
   return Communication
     .where({ customer })
-    .fetch();
+    .fetchAll()
+    .then(result => { return result.toJSON() });
 };
 
 exports.getAllForUser = user => {
   return Communication
     .where({ user })
-    .fetch();
+    .fetchAll()
+    .then(result => { return result.toJSON() });
 };
 
 exports.create = (communicationType, customer, user) => {

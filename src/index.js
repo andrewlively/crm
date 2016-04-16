@@ -22,6 +22,7 @@ app.use(session({
 }))
 
 app.use(`/`, require(`./routes/Index`));
+app.use(`/search`, require(`./routes/Search`));
 
 app.listen(config.port);
 console.log(`App listening on port ${ config.port }`);
