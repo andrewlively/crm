@@ -3,7 +3,7 @@ const User = require(`../../libs/User`);
 
 router.get(`/`, (req, res) => {
   if (req.session.user) {
-    return res.render(`dashboard`);
+    return res.render(`dashboard`, { _page: `dashboard` });
   }
 
   res.redirect(`/login`);

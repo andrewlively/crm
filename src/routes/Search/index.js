@@ -9,7 +9,7 @@ router.get(`/`, async (req, res) => {
   } catch (err) {
     res
       .status(500)
-      .render(`error`, { message: `Failed to search customers` });
+      .render(`error`, { message: `Failed to search customers`, _page: `error` });
   }
 });
 

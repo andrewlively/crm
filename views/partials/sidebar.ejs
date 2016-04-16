@@ -1,7 +1,16 @@
 <div class="col-sm-3 col-md-2 sidebar">
   <ul class="nav nav-sidebar">
-    <li class="active">
-      <a href="/">Dashboard <span class="sr-only">(current)</span></a>
+    <li <%- isActive(`dashboard`, _page) %>>
+      <a href="/">Dashboard</a>
+    </li>
+    <li <%- isActive(`customer`, _page) %>>
+      <a href="/customer">Customers</a>
+    </li>
+    <li <%- isActive(`sale`, _page) %>>
+      <a href="/customer">Sales</a>
+    </li>
+    <li <%- isActive(`user`, _page) %>>
+      <a href="/user">Users</a>
     </li>
   </ul>
 </div>
