@@ -37,6 +37,10 @@ exports.searchByName = name => {
 };
 
 exports.create = (name, latitude, longitude) => {
+  if (!name) {
+    return Promise.reject(`Invalid name provided`);
+  }
+
   return Customer
     .forge({
       name,
