@@ -1,7 +1,7 @@
 {
-  "name": "data-driven-app",
+  "name": "crm",
   "version": "1.0.0",
-  "description": "Simple Data Driven Application",
+  "description": "Simple CRM for demo",
   "main": "dist/index.js",
   "scripts": {
     "test": "./node_modules/.bin/ava tests",
