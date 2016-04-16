@@ -23,8 +23,8 @@ exports.Customer = database.Model.extend({
   tableName: 'customer'
 });
 
-exports.Item = database.Model.extend({
-  tableName: 'item'
+exports.Service = database.Model.extend({
+  tableName: 'service'
 });
 
 exports.Sale = database.Model.extend({

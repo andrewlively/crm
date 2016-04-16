@@ -15,7 +15,7 @@ SET client_min_messages = warning;
 
 --
 -- TOC entry 1 (class 3079 OID 11787)
--- Name: plpgsql; Type: EXTENSION; Schema: -; Owner: 
+-- Name: plpgsql; Type: EXTENSION; Schema: -; Owner:
 --
 
 CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
@@ -24,7 +24,7 @@ CREATE EXTENSION IF NOT EXISTS plpgsql WITH SCHEMA pg_catalog;
 --
 -- TOC entry 2068 (class 0 OID 0)
 -- Dependencies: 1
--- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner: 
+-- Name: EXTENSION plpgsql; Type: COMMENT; Schema: -; Owner:
 --
 
 COMMENT ON EXTENSION plpgsql IS 'PL/pgSQL procedural language';
@@ -38,7 +38,7 @@ SET default_with_oids = false;
 
 --
 -- TOC entry 174 (class 1259 OID 16412)
--- Name: customer; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: customer; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
 --
 
 CREATE TABLE customer (
@@ -77,7 +77,7 @@ ALTER SEQUENCE "Customer_id_seq" OWNED BY customer.id;
 
 --
 -- TOC entry 176 (class 1259 OID 16424)
--- Name: item; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: item; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
 --
 
 CREATE TABLE item (
@@ -115,7 +115,7 @@ ALTER SEQUENCE "Item_id_seq" OWNED BY item.id;
 
 --
 -- TOC entry 172 (class 1259 OID 16399)
--- Name: user; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: user; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
 --
 
 CREATE TABLE "user" (
@@ -155,7 +155,7 @@ ALTER SEQUENCE "User_id_seq" OWNED BY "user".id;
 
 --
 -- TOC entry 187 (class 1259 OID 16516)
--- Name: communication; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: communication; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
 --
 
 CREATE TABLE communication (
@@ -267,7 +267,7 @@ ALTER SEQUENCE communication_rep_seq OWNED BY communication.rep;
 
 --
 -- TOC entry 182 (class 1259 OID 16499)
--- Name: communication_type; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: communication_type; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
 --
 
 CREATE TABLE communication_type (
@@ -304,7 +304,7 @@ ALTER SEQUENCE communication_type_id_seq OWNED BY communication_type.id;
 
 --
 -- TOC entry 180 (class 1259 OID 16475)
--- Name: sale; Type: TABLE; Schema: public; Owner: postgres; Tablespace: 
+-- Name: sale; Type: TABLE; Schema: public; Owner: postgres; Tablespace:
 --
 
 CREATE TABLE sale (
@@ -641,7 +641,7 @@ COPY "user" (id, "firstName", "lastName", email, password) FROM stdin;
 
 --
 -- TOC entry 1923 (class 2606 OID 16421)
--- Name: Customer_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: Customer_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
 --
 
 ALTER TABLE ONLY customer
@@ -650,7 +650,7 @@ ALTER TABLE ONLY customer
 
 --
 -- TOC entry 1925 (class 2606 OID 16432)
--- Name: Item_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: Item_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
 --
 
 ALTER TABLE ONLY item
@@ -659,7 +659,7 @@ ALTER TABLE ONLY item
 
 --
 -- TOC entry 1919 (class 2606 OID 16409)
--- Name: User_email_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: User_email_key; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
 --
 
 ALTER TABLE ONLY "user"
@@ -668,7 +668,7 @@ ALTER TABLE ONLY "user"
 
 --
 -- TOC entry 1921 (class 2606 OID 16407)
--- Name: User_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: User_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
 --
 
 ALTER TABLE ONLY "user"
@@ -677,7 +677,7 @@ ALTER TABLE ONLY "user"
 
 --
 -- TOC entry 1931 (class 2606 OID 16525)
--- Name: communication_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: communication_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
 --
 
 ALTER TABLE ONLY communication
@@ -686,7 +686,7 @@ ALTER TABLE ONLY communication
 
 --
 -- TOC entry 1929 (class 2606 OID 16507)
--- Name: communication_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: communication_type_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
 --
 
 ALTER TABLE ONLY communication_type
@@ -695,7 +695,7 @@ ALTER TABLE ONLY communication_type
 
 --
 -- TOC entry 1927 (class 2606 OID 16486)
--- Name: sale_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace: 
+-- Name: sale_pkey; Type: CONSTRAINT; Schema: public; Owner: postgres; Tablespace:
 --
 
 ALTER TABLE ONLY sale
@@ -764,4 +764,3 @@ GRANT ALL ON SCHEMA public TO PUBLIC;
 --
 -- PostgreSQL database dump complete
 --
-
