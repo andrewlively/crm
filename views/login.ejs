@@ -6,7 +6,7 @@
     <title>Simple CRM</title>
   </head>
   <body>
-    <div class="container">
+    <div class="container" style="text-align: center">
       <form action="/login" method="post" class="form-signin">
         <h2 class="form-signin-heading">Please sign in</h2>
         <label for="inputEmail" class="sr-only">Email address</label>
@@ -15,7 +15,9 @@
         <input type="password" name="password" id="inputPassword" class="form-control" placeholder="Password" required>
         <button class="btn btn-lg btn-primary btn-block" type="submit">Sign in</button>
       </form>
+      <a href="#" data-toggle="modal" data-target="#signupModal">Create Account</a>
     </div>
+    <% include signup_modal %>
     <% include partials/scripts %>
   </body>
 </html>
