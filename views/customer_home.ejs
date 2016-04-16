@@ -3,7 +3,7 @@
   <head>
     <meta charset="utf-8">
     <% include partials/head %>
-    <title>CRM - Search Results</title>
+    <title>CRM - Customers</title>
   </head>
   <body>
     <% include partials/navbar %>
@@ -12,7 +12,7 @@
       <div class="row">
         <% include partials/sidebar %>
         <div class="col-sm-9 col-sm-offset-3 col-md-10 col-md-offset-2 main">
-          <h1 class="page-header">Results for: <%= query %></h1>
+          <h1 class="page-header">Customers</h1>
           <table class="table table-striped">
             <thead>
               <tr>
@@ -28,7 +28,7 @@
               <% customers.forEach(customer => { %>
                 <tr>
                   <td>
-                    <%= customer.name %>
+                    <a href="/customer/<%= customer.id %>"><%= customer.name %></a>
                   </td>
                   <td>
                     <%= customer.location.x %>, <%= customer.location.y %>

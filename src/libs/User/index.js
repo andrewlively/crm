@@ -33,6 +33,17 @@ const passwordMatches = (plain, hashed) => {
   });
 };
 
+exports.get = id => {
+  if (id) {
+    return User
+      .where({ id })
+      .fetch()
+      .then(result => { return result.toJSON() });
+  }
+
+  return User.fetchAll().then(result => { return result.toJSON() });
+};
+
 exports.login = (email, password, raw = true) => {
   return new Promise(async (resolve, reject) => {
     try {
