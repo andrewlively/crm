@@ -1,6 +1,5 @@
 require(`babel-polyfill`);
 
-const config = require(`../config.json`);
 const express = require(`express`);
 const app = express();
 const bodyParser = require(`body-parser`);
@@ -17,7 +16,7 @@ app.use(bodyParser.urlencoded({
 app.use(bodyParser.json());
 app.use(session({
   genid: () => { return uuid.v4(); },
-  secret: config.sessionSecret,
+  secret: process.env.SESSION_SECRET,
   resave: true,
   saveUninitialized: true
 }));
@@ -33,5 +32,5 @@ app.use(`/sale`, middleware.checkSession, middleware.passPage(`sale`), require(`
 app.use(`/search`, middleware.checkSession, middleware.passPage(`search`), require(`./routes/Search`));
 app.use(`/user`, middleware.checkSession, middleware.passPage(`user`), require(`./routes/User`));
 
-app.listen(config.port);
-console.log(`App listening on port ${ config.port }`);
+app.listen(process.env.PORT);
+console.log(`App listening on port ${ process.env.PORT }`);
